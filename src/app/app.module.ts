@@ -12,7 +12,7 @@ import { UserEditComponent } from './user-edit/user-edit.component';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/car-list', pathMatch: 'full' },
+  { path: '', redirectTo: '/user-list', pathMatch: 'full' },
   {
     path: 'user-list',
     component: UserListComponent
