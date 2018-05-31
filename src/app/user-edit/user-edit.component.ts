@@ -2,6 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UserService } from '../shared/user/user.service';
 import { NgForm } from '@angular/forms';
+import { Destroyable, takeUntilDestroy } from 'take-until-destroy'
+ 
 
 @Component({
   selector: 'app-user-edit',
@@ -19,7 +21,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-     this.route.params.takeUntil(componentDestroyed(this)).subscribe(params => {
+     this.route.params.pipe(takeUntilDestroy(this)).subscribe(params => {
       const id = params['id'];
       if (id) {
         this.userService.get(id).subscribe((user: any) => {
