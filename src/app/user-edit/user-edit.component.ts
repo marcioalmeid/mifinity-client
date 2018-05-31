@@ -27,7 +27,7 @@ export class UserEditComponent implements OnInit, OnDestroy {
         this.userService.get(id).subscribe((user: any) => {
           if (user) {
             this.user = user;
-            this.user.href = user._links.self.href;            
+              console.log(user.userName);            
           } else {
             console.log(`User with id '${id}' not found, returning to list`);
             this.gotoList();
