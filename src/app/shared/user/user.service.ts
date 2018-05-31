@@ -14,7 +14,7 @@ export class UserService {
   public USER_API = this.API + '/user';
 
   getAll(): Observable<any> {
-    return this.http.get(this.API + '/list');
+    return this.http.get(this.USER_API + '/list');
   }
 
   get(id: string) {
