@@ -24,6 +24,7 @@
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
     "hoek": "github:hapijs/hoek",
+    "ng2-rx-componentdestroyed": "^3.0.0",
     "rxjs": "^6.2.0",
     "zone.js": "^0.8.26"
   },
