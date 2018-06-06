@@ -17,10 +17,22 @@
           <div *ngIf="loginForm.controls.password.errors.required">Password is required</div>
         </div>
       </div>
-      <button class="btn btn-default">Login</button>
+      <mat-card-actions>
+    <button class="btn btn-default">Login</button>
+     
+  </mat-card-actions>
+      
       <div *ngIf="invalidLogin" class="error">
         <div>Invalid credentials.</div>
       </div>
-    </form>
+   
+     </form>
   </div>
+</div>
+
+<div class="example-container">
+  <mat-form-field [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <input matInput placeholder="Enter user name" [formControl]="userName" required>
+    <mat-error *ngIf="userName.invalid">Invalid credentials}</mat-error>
+  </mat-form-field>
 </div>
