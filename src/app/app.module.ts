@@ -1,51 +1,40 @@
-import { UserService } from './shared/user/user.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
-import { UserListComponent } from './user-list/user-list.component';
-import { MatButtonModule, MatCardModule, MatInputModule, MatListModule, MatToolbarModule } from '@angular/material';
+import { LoginComponent } from './login/login.component';
+import { routing } from './app.routing';
+import { AddUserComponent } from './add-user/add-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
+import { ListUserComponent } from './list-user/list-user.component';
+import {AuthenticationService} from "./service/auth.service";
+import {ReactiveFormsModule} from "@angular/forms";
+import {HttpClientModule} from "@angular/common/http";
+import {UserService} from "./service/user.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
-import { UserEditComponent } from './user-edit/user-edit.component';
-
-
-const appRoutes: Routes = [
-  { path: '', redirectTo: '/user-list', pathMatch: 'full' },
-  {
-    path: 'user-list',
-    component: UserListComponent
-  },
-  {
-    path: 'user-add',
-    component: UserEditComponent
-  },
-  {
-    path: 'user-edit/:id',
-    component: UserEditComponent
-  }
-];
+import { ListUser2Component } from './list-user2/list-user2.component';
+import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserListComponent,
-    UserEditComponent
+    LoginComponent,
+    AddUserComponent,
+    EditUserComponent,
+    ListUserComponent,
+    ListUser2Component
   ],
   imports: [
     BrowserModule,
+    routing, 
+    ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCardModule,
-    MatInputModule,
-    MatListModule,
-    MatToolbarModule,
-    FormsModule,
-    RouterModule.forRoot(appRoutes)
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
-  providers: [UserService],
+  providers: [AuthenticationService, UserService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
