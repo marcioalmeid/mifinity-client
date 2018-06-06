@@ -21,11 +21,11 @@ export class UserService {
   }
 
   getUserById(id: number) {
-    return this.http.get<User>(this.baseUrl + '' + id);
+    return this.http.get<User>(this.baseUrl + '/' + id);
   }
 
   editUser(id: number) {
-    return this.http.get<User>(this.baseUrl + '' + id);
+    return this.http.get<User>(this.baseUrl + '/' + id);
   }
 
   updateUser(user: User) {
