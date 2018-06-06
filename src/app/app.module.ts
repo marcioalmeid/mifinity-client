@@ -13,7 +13,10 @@ import {HttpClientModule} from "@angular/common/http";
 import {UserService} from "./service/user.service";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListUser2Component } from './list-user2/list-user2.component';
-import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/material';
+import { MatTableModule, MatPaginatorModule, MatSortModule, MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
+import { MenuComponent } from './menu/menu.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,8 @@ import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/mate
     AddUserComponent,
     EditUserComponent,
     ListUserComponent,
-    ListUser2Component
+    ListUser2Component,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +36,14 @@ import { MatTableModule, MatPaginatorModule, MatSortModule } from '@angular/mate
     BrowserAnimationsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
+    MatCardModule
   ],
   providers: [AuthenticationService, UserService ],
   bootstrap: [AppComponent]
