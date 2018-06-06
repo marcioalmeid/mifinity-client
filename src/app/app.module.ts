@@ -17,6 +17,8 @@ import { MatTableModule, MatPaginatorModule, MatSortModule} from '@angular/mater
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
 import { MenuComponent } from './menu/menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatFormFieldModule } from '@angular/material';
+import { MatInputModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -42,6 +44,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatListModule,
     MatCardModule
   ],
