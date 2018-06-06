@@ -21,8 +21,8 @@ export class LoginComponent implements OnInit {
     if (this.loginForm.invalid) {
       return;
     }
-    if(this.loginForm.controls.email.value == 'mamdownloads@gmail.com' && this.loginForm.controls.password.value == '123') {
-        this.router.navigate(['list-user2']);
+    if(this.loginForm.controls.userName.value == 'marcio' && this.loginForm.controls.password.value == '123') {
+        this.router.navigate(['menu']);
     }else {
       this.invalidLogin = true;
     }
@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.loginForm = this.formBuilder.group({
-      email: ['', Validators.required],
+      userName: ['', Validators.required],
       password: ['', Validators.required]
     });
   }
