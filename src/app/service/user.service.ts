@@ -21,7 +21,7 @@ export class UserService {
   }
 
   getUserById(id: number) {
-    return this.http.get<User>(this.baseUrl + '/' + id);
+    return this.http.get<User>(this.baseUrl + '/getUser/' + id);
   }
 
   editUser(id: number) {
