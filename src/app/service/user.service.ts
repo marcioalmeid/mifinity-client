@@ -37,14 +37,7 @@ export class UserService {
   }
 
   deleteUser(user: User) {
-<<<<<<< HEAD
     return this.http.delete(this.baseUrl + '/delete/' + user.id);
-  } 
-  
-
-=======
-    return this.http.post(this.baseUrl + '/delete/', user);
   }
-  
->>>>>>> 8c28e03b22776fbdfdaf4cac704b29c9451b75cb
+   
 }
