@@ -3,6 +3,19 @@
   <div class="col-md-6 col-md-offset-2">
     <h1>Login </h1>
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    
+    <p>
+	  <mat-form-field appearance="legacy">
+	    <mat-label>User name</mat-label>
+	    <input matInput placeholder="Placeholder">
+	    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+	    <mat-hint>Type your user name</mat-hint>
+	    <mat-error *ngIf="invalidLogin">
+	      <div>Invalid credentials.</div>
+	    </mat-error>
+	  </mat-form-field>
+	</p>
+    
       <div class="form-group">
         <label for="userName">User Name:</label>
         <input type="userName" class="form-control" formControlName="userName" id="userName">
@@ -29,37 +42,10 @@
      </form>
   </div>
 </div>
- 
-<p>
-  <mat-form-field appearance="legacy">
-    <mat-label>Legacy form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="standard">
-    <mat-label>Standard form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
-<p>
-  <mat-form-field appearance="outline">
-    <mat-label>Outline form field</mat-label>
-    <input matInput placeholder="Placeholder">
-    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
-  </mat-form-field>
-</p>
+
+
+
+
+
+
  
