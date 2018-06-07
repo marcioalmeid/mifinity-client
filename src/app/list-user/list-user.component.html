@@ -1,7 +1,22 @@
-<!-- <div class="example-card">
-  <h2> User Details</h2>
-  <button class="btn btn-danger" (click)="addUser()"> Add User</button>
-  <table class="table table-striped">
+   <div class="mat-elevation-z8">
+ 
+ <mat-card class="example-card">
+   <mat-card-header>
+     <mat-card-title>User Details</mat-card-title>
+   </mat-card-header>   
+   <mat-card-content>
+      <button class="btn btn-danger" (click)="addUser()"> Add User</button>
+    </mat-card-content>
+  </mat-card>
+
+
+   <mat-card class="example-card">
+   <mat-card-header>
+     <mat-card-title>List user</mat-card-title>
+   </mat-card-header>
+   <mat-card-content>
+    
+     <table class="table table-striped">
     <thead>
     <tr>
       <th class="hidden">Id</th>
@@ -21,55 +36,8 @@
     </tr>
     </tbody>
   </table>
-</div>-->
-
-<!--   <mat-card class="example-card">
-   <mat-card-header>
-     <mat-card-title>List user</mat-card-title>
-   </mat-card-header>
-   <mat-card-content>
-      -->
-       <div class="mat-elevation-z8">
-  <mat-table #table [dataSource]="users" aria-label="Elements">
-  
-    <ng-container matColumnDef="id">
-      <mat-header-cell >User Name</mat-header-cell>
-      <mat-cell *matCellDef="let user">{{user.userName}}</mat-cell>
-    </ng-container>
-
-    
-    <ng-container matColumnDef="name">
-      <mat-header-cell >Password</mat-header-cell>
-      <mat-cell *matCellDef="let user">{{user.password}}</mat-cell>
-    </ng-container>
-    
-    <ng-container matColumnDef="delete">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>Delete</mat-header-cell>
-      <mat-cell *matCellDef="let user">
-         <mat-card-actions>
-      		<button mat-raised-button (click)="deleteUser(user)" type="button" color="primary">Delete</button>
-   		</mat-card-actions>
-   </mat-cell>    
-   </ng-container>  
-   
-   <ng-container matColumnDef="edit">
-    <mat-header-cell *matHeaderCellDef mat-sort-header>Edit</mat-header-cell>
-      <mat-cell *matCellDef="let user">
-         <mat-card-actions>
-      		<button mat-raised-button (click)="editUser(user)" type="button" color="primary">Edit</button>
-   		</mat-card-actions>
-   </mat-cell>    
-   </ng-container>    
-    
-
-    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-  </mat-table>
- 
 </div>
 
-<!--
-   </mat-card-content>
-   
+   </mat-card-content>  
  </mat-card>
-   -->
+    
