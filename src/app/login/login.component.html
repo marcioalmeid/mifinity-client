@@ -29,10 +29,37 @@
      </form>
   </div>
 </div>
-
-<div class="example-container">
-  <mat-form-field [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <input matInput placeholder="Enter user name" formControl="userName" required>
-    <mat-error *ngIf="userName.invalid">Invalid credentials}</mat-error>
+ 
+<p>
+  <mat-form-field appearance="legacy">
+    <mat-label>Legacy form field</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
   </mat-form-field>
-</div>
+</p>
+<p>
+  <mat-form-field appearance="standard">
+    <mat-label>Standard form field</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Fill form field</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="outline">
+    <mat-label>Outline form field</mat-label>
+    <input matInput placeholder="Placeholder">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Hint</mat-hint>
+  </mat-form-field>
+</p>
+ 
