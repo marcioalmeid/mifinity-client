@@ -22,8 +22,8 @@
        </tr></table>
        
    <mat-card-actions>
-     <button mat-button mat-raised-button color="primary" type="button">Login</button>
-      <button mat-raised-button (click)="submit()" color="primary">Login</button>
+      
+      <button mat-raised-button (click)="onSubmit()" type="button" color="primary">Login</button>
    </mat-card-actions>  
     
      <div *ngIf="invalidLogin" class="error">
