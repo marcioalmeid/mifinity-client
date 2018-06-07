@@ -14,7 +14,10 @@
 	    <mat-error *ngIf="invalidLogin">
 	      <div>Invalid credentials.</div>
 	    </mat-error>
-	 
+	  </mat-form-field>
+	  </p>
+	 <p>
+	  <mat-form-field appearance="legacy">
 	    <mat-label>Password</mat-label>
 	    <input matInput placeholder="Placeholder">
 	    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
@@ -22,7 +25,6 @@
 	    <mat-error *ngIf="submitted && loginForm.controls.password.errors">
 	      <div *ngIf="loginForm.controls.userName.errors.required">userName is required</div>
 	    </mat-error>
-	 
 	  </mat-form-field>
 	</p>
     
