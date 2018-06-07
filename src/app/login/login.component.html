@@ -20,17 +20,21 @@
            <!-- <input matInput placeholder="Placeholder" type="password" formControlName="password" id="pwd"> -->
          </mat-form-field></td>
        </tr></table>
+       
+   <mat-card-actions>
+     <button mat-button mat-raised-button color="primary" type="button">Login</button>
+   </mat-card-actions>  
+    
+     <div *ngIf="invalidLogin" class="error">
+        <div>Invalid credentials.</div>
+      </div>
+    
      </form>
     
    </mat-card-content>
-   <mat-card-actions>
-     <button mat-raised-button color="primary" type="button">Login</button>
-   </mat-card-actions>
+   
  </mat-card>
  
-      <div *ngIf="invalidLogin" class="error">
-        <div>Invalid credentials.</div>
-      </div>
     
        
    
