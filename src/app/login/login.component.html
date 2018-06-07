@@ -9,14 +9,14 @@
          <tr>
            <td>
              <mat-form-field class="example-full-width">
-             <input matInput placeholder="Username" [(ngModel)]="username" name="userName" required>
+             <input matInput placeholder="Username" formControlName="userName" id="userName" required>
              <!-- <input matInput placeholder="Placeholder" type="userName"   formControlName="userName" id="userName"> -->
              </mat-form-field>
            </td>
          </tr>
          <tr>
          <td><mat-form-field class="example-full-width">
-           <input matInput placeholder="Password" [(ngModel)]="password"type="password" name="password" id="pwd" required>
+           <input matInput placeholder="Password" formControlName="password" type="password" name="password" id="pwd" required>
            <!-- <input matInput placeholder="Placeholder" type="password" formControlName="password" id="pwd"> -->
          </mat-form-field></td>
        </tr></table>
