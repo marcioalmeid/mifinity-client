@@ -8,7 +8,7 @@
 	  <mat-form-field appearance="legacy">
 	 
 	    <mat-label>User name</mat-label>
-	    <input matInput placeholder="Placeholder">
+	    <input matInput placeholder="Placeholder" type="userName"   formControlName="userName" id="userName">
 	    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
 	    <mat-hint>Type your user name</mat-hint>
 	    <mat-error *ngIf="invalidLogin">
@@ -19,7 +19,7 @@
 	 <p>
 	  <mat-form-field appearance="legacy">
 	    <mat-label>Password</mat-label>
-	    <input matInput placeholder="Placeholder">
+	    <input matInput placeholder="Placeholder" type="password" formControlName="password" id="pwd">
 	    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
 	    <mat-hint>Type your password</mat-hint>
 	    <mat-error *ngIf="submitted && loginForm.controls.password.errors">
@@ -27,7 +27,8 @@
 	    </mat-error>
 	  </mat-form-field>
 	</p>
-    
+   
+   <!--  
       <div class="form-group">
         <label for="userName">User Name:</label>
         <input type="userName" class="form-control" formControlName="userName" id="userName">
@@ -42,15 +43,14 @@
           <div *ngIf="loginForm.controls.password.errors.required">Password is required</div>
         </div>
       </div>
-      <mat-card-actions>
-    <button class="btn btn-default">Login</button>
-     
-  </mat-card-actions>
-      
       <div *ngIf="invalidLogin" class="error">
         <div>Invalid credentials.</div>
       </div>
-   
+    -->
+       
+      <button mat-button>Click me!</button>
+        
+      
      </form>
   </div>
 </div>
