@@ -20,9 +20,13 @@
        </tr></table>
        
    <mat-card-actions>
-      
-      <button mat-raised-button (click)="onSubmit()" type="button" color="primary">Add User</button>
+        <button mat-raised-button (click)="onSubmit()" type="button" color="primary">Add User</button>
    </mat-card-actions>  
+  
+   <mat-card-actions>    
+      <button mat-raised-button (click)="login()" type="button" color="primary">Login</button>
+   </mat-card-actions>  
+    
     
      <div *ngIf="invalidLogin" class="error">
         <div>Invalid credentials.</div>

@@ -32,6 +32,11 @@ export class AddUserComponent implements OnInit {
       });
   console.log("submited ..! ");
   }
-
+  
+  
+  login():void{
+   this.router.navigate(['login']);
+  };
+  
 }
 
