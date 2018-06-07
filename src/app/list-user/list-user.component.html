@@ -1,4 +1,4 @@
-<!-- <div class="col-md-6">
+<!-- <div class="example-card">
   <h2> User Details</h2>
   <button class="btn btn-danger" (click)="addUser()"> Add User</button>
   <table class="table table-striped">
@@ -30,17 +30,17 @@
    <mat-card-content>
      
        <div class="mat-elevation-z8">
-  <mat-table #table [dataSource]="users" matSort aria-label="Elements">
+  <mat-table #table [dataSource]="users" aria-label="Elements">
 
     <!-- Id Column -->
     <ng-container matColumnDef="id">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>User Name</mat-header-cell>
+      <mat-header-cell >User Name</mat-header-cell>
       <mat-cell *matCellDef="let user">{{user.userName}}</mat-cell>
     </ng-container>
 
     <!-- Name Column -->
     <ng-container matColumnDef="name">
-      <mat-header-cell *matHeaderCellDef mat-sort-header>Password</mat-header-cell>
+      <mat-header-cell >Password</mat-header-cell>
       <mat-cell *matCellDef="let user">{{user.password}}</mat-cell>
     </ng-container>
     
