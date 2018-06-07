@@ -1,18 +1,37 @@
-<div class="col-md-6">
-  <h2 class="text-center">Add User</h2>
-  <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
-
-    <div class="form-group">
-      <label for="firstName">User Name:</label>
-      <input formControlName="userName" placeholder="User Name" name="userName" class="form-control" id="userName">
-    </div>
-
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input formControlName="password" placeholder="Password" name="password" class="form-control" id="password">
-    </div>
-
-    <button class="btn btn-success">Update</button>
-  </form>
-</div>
-
+ <mat-card class="example-card">
+   <mat-card-header>
+     <mat-card-title>Add user</mat-card-title>
+   </mat-card-header>
+   <mat-card-content>
+     
+       <form [formGroup]="addForm" (ngSubmit)="onSubmit()" class="example-form">
+       <table class="example-full-width" >
+         <tr>
+           <td>
+             <mat-form-field class="example-full-width">
+             <input matInput placeholder="Username" formControlName="userName" id="userName" required>          
+             </mat-form-field>
+           </td>
+         </tr>
+         <tr>
+         <td><mat-form-field class="example-full-width">
+           <input matInput placeholder="Password" formControlName="password" type="password" name="password" id="pwd" required>           
+         </mat-form-field></td>
+       </tr></table>
+       
+   <mat-card-actions>
+      
+      <button mat-raised-button (click)="onSubmit()" type="button" color="primary">Update</button>
+   </mat-card-actions>  
+    
+     <div *ngIf="invalidLogin" class="error">
+        <div>Invalid credentials.</div>
+      </div>
+    
+     </form>
+    
+   </mat-card-content>
+   
+ </mat-card>
+ 
+ 
